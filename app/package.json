@@ -1,0 +1,21 @@
+{
+  "name": "@itonami/isic6622",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "itonami": {
+    "id": "network.itonami.isic6622",
+    "title": "Activities of insurance agents and brokers",
+    "source": "cloud-itonami-isic-6622"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "tauri": "tauri",
+    "build:desktop": "npm run build && tauri build --no-bundle",
+    "build:android": "sh scripts/android-apk.sh"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "3.0.0-alpha.6"
+  }
+}
